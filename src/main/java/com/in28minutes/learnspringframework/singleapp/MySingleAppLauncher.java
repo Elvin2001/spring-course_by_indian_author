@@ -2,6 +2,7 @@ package com.in28minutes.learnspringframework.singleapp;
 
 import com.in28minutes.learnspringframework.singleapp.configuration.MyConfig;
 import com.in28minutes.learnspringframework.singleapp.domain.BusinessCalculationService;
+import com.in28minutes.learnspringframework.singleapp.domain.MongoDBDataService;
 import com.in28minutes.learnspringframework.singleapp.domain.MySQLDataService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,7 +20,7 @@ public class MySingleAppLauncher {
             MySQLDataService firstBean = context.getBean(MySQLDataService.class);
             MySQLDataService secondBean = context.getBean(MySQLDataService.class);
 
-            System.out.println(firstBean == secondBean);
+            MongoDBDataService thirdBean = context.getBean(MongoDBDataService.class);
             System.out.println(service.findMax());
         }
 
