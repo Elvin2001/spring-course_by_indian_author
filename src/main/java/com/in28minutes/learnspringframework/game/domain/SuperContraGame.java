@@ -1,5 +1,8 @@
 package com.in28minutes.learnspringframework.game.domain;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SuperContraGame implements GameConsole {
     @Override
     public void up() {

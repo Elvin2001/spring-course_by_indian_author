@@ -1,4 +1,4 @@
-package com.in28minutes.learnspringframework.game.meeting.domain;
+package com.in28minutes.learnspringframework.meeting.domain;
 
 import java.util.Arrays;
 

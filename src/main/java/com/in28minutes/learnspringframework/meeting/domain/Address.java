@@ -1,4 +1,4 @@
-package com.in28minutes.learnspringframework.game.meeting.domain;
+package com.in28minutes.learnspringframework.meeting.domain;
 
 public class Address {
     private String countryName;
