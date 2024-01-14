@@ -3,17 +3,19 @@ package com.in28minutes.learnspringframework.domain;
 import java.util.Arrays;
 
 public class Person {
-
     private String firstName;
     private String lastName;
     private int age;
     private String[] hobbies;
 
-    public Person(String firstName, String lastName, int age, String[] hobbies) {
+    private Address address;
+
+    public Person(String firstName, String lastName, int age, String[] hobbies, Address address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.hobbies = hobbies;
+        this.address = address;
     }
 
     public String getFirstName() {
@@ -32,6 +34,10 @@ public class Person {
         return hobbies;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -39,6 +45,7 @@ public class Person {
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 ", hobbies=" + Arrays.toString(hobbies) +
+                ", address=" + address +
                 '}';
     }
 }
