@@ -1,7 +1,7 @@
-package com.in28minutes.learnspringframework.configuration;
+package com.in28minutes.learnspringframework.game.meeting.configuration;
 
-import com.in28minutes.learnspringframework.domain.Address;
-import com.in28minutes.learnspringframework.domain.Person;
+import com.in28minutes.learnspringframework.game.meeting.domain.Address;
+import com.in28minutes.learnspringframework.game.meeting.domain.Person;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

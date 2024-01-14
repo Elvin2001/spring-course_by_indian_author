@@ -1,8 +1,7 @@
-package com.in28minutes.learnspringframework;
+package com.in28minutes.learnspringframework.game.meeting;
 
-import com.in28minutes.learnspringframework.configuration.MyConfiguration;
-import com.in28minutes.learnspringframework.domain.Address;
-import com.in28minutes.learnspringframework.domain.Person;
+import com.in28minutes.learnspringframework.game.meeting.configuration.MyConfiguration;
+import com.in28minutes.learnspringframework.game.meeting.domain.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
