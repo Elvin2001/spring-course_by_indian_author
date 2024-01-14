@@ -1,6 +1,7 @@
 package com.in28minutes.learnspringframework;
 
 import com.in28minutes.learnspringframework.configuration.MyConfiguration;
+import com.in28minutes.learnspringframework.domain.Address;
 import com.in28minutes.learnspringframework.domain.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,8 +17,7 @@ public class LearnSpringframeworkApplication {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfiguration.class);
 
-//		System.out.println(context.getBean("secondPersonBean"));
-
+        System.out.println(context.getBean(Person.class));
         Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
         System.out.println();
         System.out.printf("Number of beans defining in IOC container = %d", context.getBeanDefinitionCount());

@@ -2,6 +2,7 @@ package com.in28minutes.learnspringframework.configuration;
 
 import com.in28minutes.learnspringframework.domain.Address;
 import com.in28minutes.learnspringframework.domain.Person;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -35,18 +36,19 @@ public class MyConfiguration {
     }
 
     @Bean(name = "secondAddressBean")
+    @Qualifier("myQualifierBean")
     public Address hisAddress() {
         return new Address("Russia", "Stavropol", "Dzerjinskogo", 23);
     }
-
-    @Bean(name = "firstPersonBean")
+    @Bean
     public Person person() {
         return new Person(firstName(), lastName(), age(), hobbies(), myAddress());
     }
 
-    @Bean(name = "secondPersonBean")
-    public Person personWithParameters(String firstName, String lastName, int age, String[] hobbies, Address firstAddressBean) {
-        return new Person(firstName, lastName, age, hobbies, firstAddressBean);
+    @Bean
+    @Primary
+    public Person personWithParameters(String firstName, String lastName, int age, String[] hobbies, @Qualifier("myQualifierBean") Address address) {
+        return new Person(firstName, lastName, age, hobbies, address);
     }
 
 
